@@ -1,0 +1,159 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+--Pale-blue: hsl(225, 100%, 94%);
+--Bright-blue: hsl(245, 75%, 52%);
+--Very-pale-blue: hsl(225, 100%, 98%);
+--Desaturated-blue: hsl(224, 23%, 55%);
+--Dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Red Hat Display', sans-serif;
+    min-height: 100vh;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--Pale-blue);
+    position: relative;
+}
+
+.card {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 450px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.hero-text {
+    padding: 8%;
+    text-align: center;
+}
+
+.title {
+    font-size: 32px;
+    font-weight: 900;
+    color: var(--Dark-blue);
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--Desaturated-blue);
+    margin-bottom: 25px;
+    padding: 0 4%;
+}
+
+.annual {
+    background-color: var(--Very-pale-blue);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;   
+}
+
+.annual-icon {
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+
+.annual-heading {
+    margin-left: 20px;
+}
+
+.annual-title {
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.price {
+    font-size: 14px;
+    color: var(--Dark-blue);
+}
+
+.annual a {
+    font-weight: 900;
+    transition: color .3s ease;
+    &:hover {
+        text-decoration: none;
+        color: var(--Bright-blue);
+    }
+}
+
+.proceed-btn {
+    display: block;
+    background-color: var(--Bright-blue);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 900;
+    border-radius: 10px;
+    padding: 20px 0;
+    margin: 30px 0;
+    transition: background-color .3s ease;
+    cursor: pointer;
+    &:hover {
+        background-color: var(--Desaturated-blue);
+    }
+}
+
+.cancel-btn {
+    text-decoration: none;
+    color: var(--Desaturated-blue);
+    font-weight: 900;
+    transition: color .3s ease;
+    &:hover {
+        color: var(--Dark-blue);
+    }
+}
+
+
+@media screen and (max-width: 425px) {
+    body {
+        background-image: url(./images/pattern-background-mobile.svg);
+        font-size: 14px;
+    }
+    
+    .card {
+        max-width: 85%;
+    }
+    
+    .description {
+        font-size: 12px;
+        margin-bottom: 10px;
+    }
+    
+    .title {
+        font-size: 22px;
+    }
+    
+    .annual {
+        padding: 10px;
+        font-size: 12px;
+    }
+    
+    .annual-title {
+        font-size: 14px;
+    }
+    
+    .price {
+        font-size: 12px;
+    }
+    
+    .proceed-btn {
+        padding: 10px 0;
+        margin: 12px 0;
+    }
+}
